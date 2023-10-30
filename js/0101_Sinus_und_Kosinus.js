@@ -1,16 +1,23 @@
+let scale = 500;
+let radius = scale * 0.8 * 0.5;
+let centerX = scale / 2;
+let centerY = scale / 2;
+
+let phi = 90;
+let sin, cos; // Nur deklarieren, nicht initialisieren
+let x, y; // Nur deklarieren
+
+let slider;
+let AccentColor;
+
+let w;
+let sinusAmplituden = [];
+let cosinusAmplituden = [];
+
+let randBreite = 30; // Breite des Randes an den Seiten
+let randHoehe = 30; // Höhe des Randes oben und unten
+
 let sketch1 = function (p) {
-    let scale = 500;
-    let radius = scale * 0.8 * 0.5;
-
-    let centerX = scale / 2;
-    let centerY = scale / 2;
-
-    let phi = 90;
-    let sin, cos; // Nur deklarieren, nicht initialisieren
-    let x, y; // Nur deklarieren
-
-    let slider;
-    let AccentColor;
 
     p.setup = function () {
         let style = getComputedStyle(document.body);
@@ -116,17 +123,6 @@ let sketch1 = function (p) {
 
 }
 let sketch2 = function (p) {
-    
-    let AccentColor;
-
-    let w;
-    let sinusAmplituden = [];
-    let cosinusAmplituden = [];
-
-    let randBreite = 30; // Breite des Randes an den Seiten
-    let randHoehe = 30; // Höhe des Randes oben und unten
-
-    let slider; // Unser neuer Slider
     p.setup = function () {
         let style = getComputedStyle(document.body);
         AccentColor = style.getPropertyValue('--AccentColor').trim();
