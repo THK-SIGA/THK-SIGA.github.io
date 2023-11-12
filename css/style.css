@@ -711,13 +711,6 @@ footer div {
 /* || SMALL */
 @media screen and (max-width: 576px) {
     :root {
-        --H1: 36px;
-        --H2: 32px;
-        --H3: 28px;
-        --H4: 24px;
-        --H5: 20px;
-        --H6: 16px;
-        --H7: 12px;
     }
 
     main .outerContainer .grid {
