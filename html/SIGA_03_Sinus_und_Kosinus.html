@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THK-SIGA</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/headerStructure.js"></script>
+
+    <script src="../src/libraries/p5/p5.js"></script>
+    <script src="../js/0101_Sinus_und_Kosinus.js"></script>
+</head>
+
+<body>
+    <!-- header will be inserted here -->
+
+    <main>
+        <div class="topicFrame">
+            <div class="topic">Sinus und Kosinus</div>
+            <div class="pageDescription">
+                Am Einheitskreis stößt man sehr schnell auf Sinus und Kosinus und erkennt, wie diese
+                beiden Funktionen sich bewegen. Wir interessieren uns genau deswegen dafür, weil Sinus
+                und Kosinus mit ihrer Wellenform für uns in der Signaltheorie die Bausteine sind, um
+                kompliziertere Funktionen zu bauen.
+            </div>
+        </div>
+        <div class="subtopic">
+            <div class="header">Sinus und Kosinus am Einheitskreis</div>
+            <div class="outerContainer center">
+                <div class="canvasFlex">
+                    <div id="canvasContainerEinheitskreis"></div>
+                    <div id="canvasContainerFunktionen"></div>
+                </div>
+                <div class="H5" id="sin">Sinus:</div>
+                <div class="H5" id="cos">Cosinus:</div>
+                <p class="H4" id="phi">&phi;:</p>
+                <div>
+                    <input type="range" min="0" max="360" value="90" step="1" id="phiInput">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer will be inserted here -->
+</body>
+
+</html>

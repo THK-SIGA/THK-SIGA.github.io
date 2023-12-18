@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THK-SIGA</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/headerStructure.js"></script>
+</head>
+
+<body>
+    <!-- header will be inserted here -->
+
+    <main>
+        <div class="topicFrame">
+            <div class="topic">Audacity</div>
+            <div class="pageDescription">
+                Audacity ist ein Open-Source Softwareprojekt. Die Applikation ermöglicht es, Audiodaten
+                aufzunehmen oder zu erzeugen, zu bearbeiten und zu speichern. Dabei stehen viele
+                Funktionen zur Verfügung, mit denen wir uns (direkt oder indirekt) auch in der
+                SIGA-Vorlesung beschäftigen.
+            </div>
+        </div>
+        <div class="outerContainer center">
+            <div class="subtopic">
+                <div class="header">Installation</div>
+
+                <div class="bodyText">Audacity kann einfach von der offiziellen Website unter <a
+                        href="https://www.audacity.de/downloads/" target="_blank">https://www.audacity.de/downloads/</a>
+                    heruntergeladen werden. Es bietet vielfältige Funktionen wie die Aufnahme und Bearbeitung von
+                    Audiodateien, unterstützt verschiedene Dateiformate und ermöglicht deren Konvertierung. Darüber
+                    hinaus bietet Audacity Tools für Spektralanalysen, Spektrogramme und weitere Analysefunktionen, die
+                    besonders im Bereich der Signaltheorie von Bedeutung sind.</div>
+            </div>
+            <!--
+                <div class="subtopic">
+                    <div class="header">Hochpass- und Tiefpass-Filter</div>
+                </div>
+            -->
+
+            <div class="subtopic">
+                <div class="header">Schwebung</div>
+                <div class="subsubtopic">
+                    <div class="header">Was ist Schwebung?</div>
+                    <div class="bodyText">
+                        Schwebung ist ein akustisches Phänomen, das auftritt, wenn zwei Töne ähnlicher, aber nicht
+                        identischer Frequenz gleichzeitig gespielt werden. Da ihre Frequenzen nur leicht unterschiedlich
+                        sind, überlagern sich die Wellen der beiden Töne und interferieren miteinander.
+                    </div>
+                    <div class="bodyText">
+                        Das Ergebnis dieser Interferenz ist eine Welle, deren Amplitude (oder Lautstärke) sich
+                        periodisch verändert - sie wird lauter und leiser in einem Muster, das als Schwebung bezeichnet
+                        wird. Die Schwebungsfrequenz, also wie schnell diese Lautstärkeänderungen auftreten, entspricht
+                        der Differenz der Frequenzen der beiden Töne. Diese Schwebungen sind hörbar als eine Art Wobbeln
+                        oder Pulsieren des Tones.
+                    </div>
+                </div>
+                <div class="subsubtopic">
+                    <div class="header">Umsetzung in Audacity</div>
+                    <ol>
+                        <li>Mono-Spuren hinzufügen: <span class="monoFont">Erzeugen > Klang</span></li>
+                        <li>Generierung zweier Sinustöne, einer mit einer Frequenz von 400 Hz, der andere mit 442 Hz;
+                            alternativ hier herunterladen und
+                            importieren:</span></li>
+                    </ol>
+                    <div class="audioContainer">
+                        <audio controls>
+                            <source src="../src/audio/440.wav" type="audio/wav">
+                        </audio>
+                        <div class="mediaDescription">400 Hz</div>
+                    </div>
+                    <div class="audioContainer">
+                        <audio controls>
+                            <source src="../src/audio/442.wav" type="audio/wav">
+                        </audio>
+                        <div class="mediaDescription">442 Hz</div>
+                    </div>
+
+                    <ol start="3">
+                        <li>Tonspuren auswählen und Mischen: <span class="monoFont">Spuren > Mix > In neue Spur mischen
+                                und rendern</span></li>
+                    </ol>
+                    <div class="image padding30">
+                        <img src="../python/Screenshot 2023-12-11 204052.jpg" alt="Bild Konto">
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- footer will be inserted here -->
+</body>
+
+</html>

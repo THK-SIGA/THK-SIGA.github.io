@@ -2,23 +2,31 @@ let scale = 500;
 let radius = scale * 0.8 * 0.5;
 let centerX = scale / 2;
 let centerY = scale / 2;
-
 let phi = 90;
-let sin, cos; // Nur deklarieren, nicht initialisieren
-let x, y; // Nur deklarieren
-
 let slider;
 let AccentColor;
-
 let w;
 let sinusAmplituden = [];
 let cosinusAmplituden = [];
+let randBreite = 30;
+let randHoehe = 30;
 
-let randBreite = 30; // Breite des Randes an den Seiten
-let randHoehe = 30; // Höhe des Randes oben und unten
+// Globale Hilfsfunktionen
+function sinDegrees(angleDegrees) {
+    return Math.sin(angleDegrees * Math.PI / 180);
+}
+
+function cosDegrees(angleDegrees) {
+    return Math.cos(angleDegrees * Math.PI / 180);
+}
+
+function addAlpha(rgbColor, alpha) {
+    let colorsOnly = rgbColor.substring(4, rgbColor.length - 1);
+    let colors = colorsOnly.split(", ").map(Number);
+    return `rgba(${colors[0]}, ${colors[1]}, ${colors[2]}, ${alpha})`;
+}
 
 let sketch1 = function (p) {
-
     p.setup = function () {
         let style = getComputedStyle(document.body);
         AccentColor = style.getPropertyValue('--AccentColor').trim();

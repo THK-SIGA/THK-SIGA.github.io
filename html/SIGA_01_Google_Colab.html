@@ -6,146 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THK-SIGA</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/headerStructure.js"></script>
 </head>
 
 <body>
-    <header class="outerContainer">
-        <!-- <div class="logo">
-                <img src="../img/image_white.png" width="1600" height="1600" />
-            </div> -->
-        <div class="gridContainer">
-            <div class="dropdown" onclick="window.location.href='..';">
-                <button class="dropbtn">SIGA</button>
-                <div class="dropdown-content">
-                    <a href="SIGA_01_Google_Colab.html">Google Colab</a>
-                    <a href="SIGA_02_Sinus_und_Kosinus.html">Sinus und Kosinus</a>
-                    <a href="SIGA_03_Faltung.html">Faltung</a>
-                    <a href="SIGA_04_Audacity.html">Audacity</a>
-                    <a href="SIGA_05_DFT.html">DFT</a>
-                    <a href="SIGA_06_Gleitender_Mittelwert.html">Gleitender Mittelwert</a>
-                    <a href="SIGA_07_Abtasttheorem.html">Abtasttheorem</a>
-                    <a href="SIGA_08_Leakage.html">Leakage</a>
-                    <a href="SIGA_09_Tierstimmen.html">Tierstimmen</a>
-                    <a href="SIGA_10_Erwartungswert_und_Varianz.html">Erwartungswert und Varianz</a>
-                    <a href="SIGA_11_Korrelationskoeffizient.html">Korrelationskoeffizient</a>
-                    <a href="SIGA_12_Linksammlung.html">Linksammlung</a>
-                </div>
-            </div>
-            <div class="dropdown" onclick="window.location.href='..';">
-                <button class="dropbtn">BV</button>
-                <div class="dropdown-content">
-                    <a href="BV_01.html">Thema 01</a>
-                    <a href="BV_02.html">Thema 02</a>
-                    <a href="BV_03.html">Thema 03</a>
-                    <a href="BV_04.html">Thema 04</a>
-                    <a href="BV_05.html">Thema 05</a>
-                    <a href="BV_06.html">Thema 06</a>
-                    <a href="BV_07.html">Thema 07</a>
-                    <a href="BV_08.html">Thema 08</a>
-                    <a href="BV_09.html">Thema 09</a>
-                    <a href="BV_10.html">Thema 10</a>
-                    <a href="BV_11.html">Thema 11</a>
-                    <a href="BV_12.html">Thema 12</a>
-                </div>
-            </div>
-        </div>
-        <!-- <div>
-                <div class="container">---</div>
-            </div> -->
-    </header>
+    <!-- header will be inserted here -->
 
     <main>
-        <div class="outerFrame">
+        <div class="topicFrame">
             <div class="topic">Google Colab</div>
+            <div class="pageDescription">
+                Google Colab ist eine cloud-basierte Entwicklungsumgebung, die eine umfassende Python-Umgebung direkt im
+                Webbrowser bereitstellt. Dadurch wird die lokale Installation von Software oder Bibliotheken
+                überflüssig, wodurch der Einstieg in die Programmierung und Datenanalyse erleichtert und
+                benutzerfreundlicher gestaltet wird.
+            </div>
         </div>
         <div class="outerContainer">
-            <div class="subtopic">Umgebungseinrichtung für das Praktikum</div>
-            <div id="Umgebungseinrichtung">
-                <div class="subsubtopic">Python</div>
-                <div class="flex">
-                    <div class="text">
-                        Wir arbeiten mit Python. Diese Programmiersprache ist von Google entwickelt worden und
-                        bietet als gescriptete, interpretierte Sprache eine Platform um schnell Ideen umzusetzen und
-                        Konzepte zu realisieren. Also so genannte Proof of Concepts. Wie wir hier auch merken werden
-                        ist Python eigentlich sehr langsam. Die Stärke liegt darin, dass Python erlaubt, sehr einfach
-                        Module aus anderen Programmiersprachen nutzbar zu machen. Python kümmert sich dabei um
-                        den Programmablauf und die bespielsweise native C Anwendung führt die Berechnung durch.
-                        <i>(evtl. noch kürzen)</i>
+            <div class="subtopic">
+                <div class="header">Umgebungseinrichtung für das Praktikum</div>
+                <div id="Umgebungseinrichtung">
+                    <div class="subsubtopic">
+                        <div class="header">Python</div>
+                        <div class="flex">
+                            <div class="text">
+                                Wir arbeiten mit Python. Diese Programmiersprache ist von Google entwickelt worden und
+                                bietet als gescriptete, interpretierte Sprache eine Platform um schnell Ideen umzusetzen
+                                und
+                                Konzepte zu realisieren. Also so genannte Proof of Concepts. Wie wir hier auch merken
+                                werden
+                                ist Python eigentlich sehr langsam. Die Stärke liegt darin, dass Python erlaubt, sehr
+                                einfach
+                                Module aus anderen Programmiersprachen nutzbar zu machen. Python kümmert sich dabei um
+                                den Programmablauf und die bespielsweise native C Anwendung führt die Berechnung durch.
+                                <i>(evtl. noch kürzen)</i>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="subsubtopic">Google Konto</div>
-                <div class="flex">
-                    <img src=" ../src/img/SIGA_01_Jupyter_Notebook/konto.png" alt="Bild Konto">
-                    <div class="text">
-                        Um am Praktikum teilzunehmen und Google Colab zu nutzen, ist ein Google-Konto erforderlich.
-                        Falls notwendig, erstelle einen temporären E-Mail-Account, um dich anschließend auf <a
-                            href="https://colab.research.google.com/"
-                            target="_blank">https://colab.research.google.com/</a>
-                        bei Google Colab anmelden zu können.
+                    <div class="subsubtopic">
+                        <div class="header">Google Konto</div>
+                        <div class="flex">
+                            <img src=" ../src/img/SIGA_01_Jupyter_Notebook/konto.png" alt="Bild Konto">
+                            <div class="text">
+                                Um am Praktikum teilzunehmen und Google Colab zu nutzen, ist ein Google-Konto
+                                erforderlich.
+                                Falls notwendig, erstelle einen temporären E-Mail-Account, um dich anschließend auf <a
+                                    href="https://colab.research.google.com/"
+                                    target="_blank">https://colab.research.google.com/</a>
+                                bei Google Colab anmelden zu können.
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="subsubtopic">Google Colab</div>
-                <div class="flex">
-                    <div class="text">
-                        Google Colab ist eine Online-Plattform für Programmierung, die es Nutzern ermöglicht,
-                        Python-Code in einer browserbasierten Umgebung auszuführen. Diese Plattform ist kostenlos
-                        verfügbar, bietet jedoch auch kostenpflichtige Optionen für erweiterte Funktionen und
-                        Ressourcen. Um Google Colab nutzen zu können, wird lediglich ein Google-Konto und einen
-                        Webbrowser benötigt, der Javascript unterstützt. Theoretisch wäre es somit möglich, Google Colab
-                        auch auf unkonventionellen Geräten wie einer Smartwatch in Verbindung mit einem RaspberryPi zu
-                        nutzen.
+                    <div class="subsubtopic">
+                        <div class="header">Google Colab</div>
+                        <div class="flex">
+                            <div class="text">
+                                Google Colab ist eine Online-Plattform für Programmierung, die es Nutzern ermöglicht,
+                                Python-Code in einer browserbasierten Umgebung auszuführen. Diese Plattform ist
+                                kostenlos
+                                verfügbar, bietet jedoch auch kostenpflichtige Optionen für erweiterte Funktionen und
+                                Ressourcen. Um Google Colab nutzen zu können, wird lediglich ein Google-Konto und einen
+                                Webbrowser benötigt, der Javascript unterstützt. Theoretisch wäre es somit möglich,
+                                Google
+                                Colab
+                                auch auf unkonventionellen Geräten wie einer Smartwatch in Verbindung mit einem
+                                RaspberryPi
+                                zu
+                                nutzen.
+                            </div>
+                            <img src="../src/img/SIGA_01_Jupyter_Notebook/colab.png" target="_blank"
+                                alt="Bild Google Colab">
+                        </div>
                     </div>
-                    <img src="../src/img/SIGA_01_Jupyter_Notebook/colab.png" target="_blank" alt="Bild Google Colab">
-                </div>
-                <div class="subsubtopic">Jupyter Notebook</div>
-                <div class="flex">
-                    <div class="text">
-                        Ein Jupyter Notebook ist eine eigenständige Datei. Mittlerweile lässt es sich direkt in Visual
-                        Studio Code öffnen, lokal auf dem eigenen Computer über einen Server betreiben oder sogar über
-                        den Webbrowser unter Zuhilfenahme externer Ressourcen nutzen. In unserem Praktikum nutzen wir
-                        die kostenfreien Rechenkapazitäten von Google und führen unsere Programmierung direkt im
-                        Webbrowser durch.
-                        <br>
-                        Um ein neues Notebook zu erstellen oder ein bereits vorhandenes aufzurufen, navigiert man zum
-                        Menü <span class="monoFont">File</span> oben links. Die für das Praktikum erforderlichen Jupyter
-                        Notebook-Dateien befinden
-                        sich im Notebook-Ordner des Signaltheorie-Kurses auf Ilu.
-                        <br>
-                        Zur Interaktion mit dem Notebook können nun unterschiedliche Zellentypen wie Markdown, Python
-                        oder einfache Textzellen erstellt werden. Nach Erstellung können diese Blöcke durch Drücken von
-                        <span class="monoFont">SHIFT+ENTER</span> ausgeführt bzw. gerendert werden. Alternativ können
-                        die ausgewählten Zelle auch
-                        über den Menüpunkt <span class="monoFont">LAUFZEIT</span> ausgeführt werden.
+                    <div class="subsubtopic">
+                        <div class="header">Jupyter Notebook</div>
+                        <div class="flex">
+                            <div class="text">
+                                Ein Jupyter Notebook ist eine eigenständige Datei. Mittlerweile lässt es sich direkt in
+                                Visual
+                                Studio Code öffnen, lokal auf dem eigenen Computer über einen Server betreiben oder
+                                sogar
+                                über
+                                den Webbrowser unter Zuhilfenahme externer Ressourcen nutzen. In unserem Praktikum
+                                nutzen
+                                wir
+                                die kostenfreien Rechenkapazitäten von Google und führen unsere Programmierung direkt im
+                                Webbrowser durch.
+                                <br>
+                                Um ein neues Notebook zu erstellen oder ein bereits vorhandenes aufzurufen, navigiert
+                                man
+                                zum
+                                Menü <span class="monoFont">File</span> oben links. Die für das Praktikum erforderlichen
+                                Jupyter
+                                Notebook-Dateien befinden
+                                sich im Notebook-Ordner des Signaltheorie-Kurses auf Ilu.
+                                <br>
+                                Zur Interaktion mit dem Notebook können nun unterschiedliche Zellentypen wie Markdown,
+                                Python
+                                oder einfache Textzellen erstellt werden. Nach Erstellung können diese Blöcke durch
+                                Drücken
+                                von
+                                <span class="monoFont">SHIFT+ENTER</span> ausgeführt bzw. gerendert werden. Alternativ
+                                können
+                                die ausgewählten Zelle auch
+                                über den Menüpunkt <span class="monoFont">LAUFZEIT</span> ausgeführt werden.
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="subsubtopic">Google Drive</div>
-                <div class="flex">
-                    <div class="text">
-                        Für spätere Praktika wird es nötig sein, auf externe Dateien zugreifen zu können. In Google
-                        Colab haben wir die Möglichkeit, dies mit Dateien, welche in Google Drive hinterlegt sind,
-                        umzusetzen.
-                        <br>
-                        Um unser Google Drive mit dem entsprechenden Jupyter Notebook zu verknüpfen, benötigen wir
-                        folgende Codezeilen:
-                        <br>
-                        <span class="monoFont">from google.colab import drive</span>
-                        <br>
-                        <span class="monoFont">drive.mount('/content/gdrive')</span>
-                        <br>
-                        Über <span class="monoFont">datei = read('/content/gdrive/My Drive/Pfad/zur/Datei')</span> kann
-                        nun auf eine Datei zugegriffen werden.
+                    <div class="subsubtopic">
+                        <div class="header">Google Drive</div>
+                        <div class="flex">
+                            <div class="text">
+                                Für spätere Praktika wird es nötig sein, auf externe Dateien zugreifen zu können. In
+                                Google
+                                Colab haben wir die Möglichkeit, dies mit Dateien, welche in Google Drive hinterlegt
+                                sind,
+                                umzusetzen.
+                                <br>
+                                Um unser Google Drive mit dem entsprechenden Jupyter Notebook zu verknüpfen, benötigen
+                                wir
+                                folgende Codezeilen:
+                                <br>
+                                <span class="monoFont">from google.colab import drive</span>
+                                <br>
+                                <span class="monoFont">drive.mount('/content/gdrive')</span>
+                                <br>
+                                Über <span class="monoFont">datei = read('/content/gdrive/My
+                                    Drive/Pfad/zur/Datei')</span>
+                                kann
+                                nun auf eine Datei zugegriffen werden.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="subtopic">Python</div>
     </main>
 
-    <footer class="outerContainer">
-        <div class="container">
-
-            <div class="nowrap"> TH Köln </div>
-        </div>
-    </footer>
+    <!-- footer will be inserted here -->
 </body>
 
 </html>

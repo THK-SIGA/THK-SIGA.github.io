@@ -13,8 +13,6 @@
     --BorderColor: rgba(204, 204, 204, 1);
 
     /* F O N T   S I Z E */
-    --HeaderFS: 20px;
-    --FooterFS: 20px;
 
     --H1: 32px;
     --H2: 28px;
@@ -23,6 +21,9 @@
     --H5: 16px;
     --H6: 12px;
     --H7: 8px;
+
+    --HeaderFS: var(--H4);
+    --FooterFS: var(--H4);
 
     --padding: 8px;
     --margin: 12px;
@@ -45,13 +46,15 @@
     word-wrap: no;
 }
 
-.outerContainer {
+.center {
     display: flex;
-    flex-direction: row;
-    margin: var(--margin) 0;
-    border: 0;
     justify-items: center;
     align-items: center;
+}
+
+.innerContainer {
+    width: 100%;
+    display: block;
 }
 
 .boxShadow {
@@ -74,6 +77,39 @@
 .leftAlign {
     text-align: start;
     width: 100%;
+}
+
+.padding10{
+    padding: 0 5%;
+    margin: 0;
+}
+
+.padding20{
+    padding: 0 10%;
+    display: flex;
+    justify-items: center;
+    margin: 0;
+}
+
+.padding30{
+    padding: 0 15%;
+    display: flex;
+    justify-items: center;
+    margin: 0;
+}
+
+.padding40{
+    padding: 0 20%;
+    display: flex;
+    justify-items: center;
+    margin: 0;
+}
+
+.padding50{
+    padding: 0 25%;
+    display: flex;
+    justify-items: center;
+    margin: 0;
 }
 
 .H1 {
@@ -109,26 +145,36 @@
     align-items: flex-start;
 }
 
-.subtopic {
-    border-radius: var(--mainBorderRadius);
-    box-shadow: inset 0 0 0 1px var(--BorderColor);
-    font-size: var(--H3);
-    letter-spacing: 2px;
-    margin: var(--margin);
-    padding: 0 calc(0.5 * var(--padding));
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
 }
 
-.subsubtopic {
-    border-bottom: 2px solid var(--AccentColor);
-    display: block;
-    font-size: var(--H4);
+.audioContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: var(--margin);
+}
+
+.audioContainer audio {
+    width: 90%;
+}
+
+.mediaDescription {
+    font-size: var(--H6);
     font-weight: 900;
-    margin: var(--padding) 0;
-    width: calc(100% - 2 * var(--margin));
-    padding: 0;
+}
+
+.bodyText {
+    line-height: 100%;
+    margin: var(--margin);
+    text-align: justify;
+    cursor: text;
 }
 
 a, a:active, a:focus {
@@ -143,6 +189,17 @@ a:focus, a:hover {
     cursor: pointer;
 }
 
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--H6);
+    justify-content: center;
+    font-weight: 600;
+    margin: var(--margin) 0;
+}
+
 img {
     display: inline-block;
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
@@ -150,7 +207,8 @@ img {
     border-radius: 4px;
     height: auto;
     padding: var(--padding);
-    width: calc(100% - 2 * var(--margin));
+    margin: 0 calc(0.5 * var(--margin));
+    width: 100%;
 }
 
 button {
@@ -172,25 +230,51 @@ button.clicked {
     color: var(--AccentColor);
 }
 
-ul {
-    font-size: var(--H5);
-    list-style-position: inside;
+ol {
+    font-size: var(--H2);
+    counter-reset: list-item calc(attr(start, number) - 1);
     list-style-type: none;
 }
 
+ol li {
+    font-size: var(--H5);
+    position: relative;
+    counter-increment: list-item;
+    padding-left: calc(var(--padding) * 3);
+}
+
+/* Stil für die Zahlen */
+ol li::before {
+    content: counter(list-item) " ";
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    width: 20px;
+    text-align: right;
+    margin-left: calc(- var(--margin));
+}
+
+ul {
+    font-size: var(--H2);
+    list-style: none; /* Standardliste verstecken */
+    margin-left: calc(var(--margin) * 1);
+}
+
 ul li {
-    align-items: center;
-    display: flex;
-    font-size: var(--H6);
+    font-size: var(--H5);
     margin: calc(0.5 * var(--margin)) 0;
+    position: relative; /* für die Positionierung des Pseudo-Elements */
+    padding-left: calc(2 * var(--margin)); /* Linken Abstand hinzufügen */
 }
 
 ul li::before {
-    content: "▷";
-    /* Fügt den Bindestrich hinzu */
-    font-size: var(--H7);
-    margin-right: 8px;
-    /* Abstand zwischen dem Bindestrich und dem Listentext */
+    content: "○";
+    font-weight: bold; /* Zahlen fett machen */
+    position: absolute; /* absolute Positionierung */
+    width: calc(1.5 * var(--margin)); /* Feste Breite für Zahlen */
+    text-align: right; /* Rechtsbündige Ausrichtung */
+    left: 0; /* Position anpassen */
+    top: 0; /* Position an der Oberseite des Elements */
 }
 
 input {
@@ -243,6 +327,10 @@ input[type="range"]:disabled::-moz-range-progress {
     background-color: transparent;
 }
 
+audio{
+    width: 80%;
+}
+
 canvas {
     margin: 0;
     border: 0;
@@ -259,9 +347,9 @@ html {
 }
 
 header {
-    border: var(--mainBorder);
     display: flex;
     justify-content: space-around;
+    padding: var(--padding);
 }
 
 header div {
@@ -273,17 +361,20 @@ header div {
     column-gap: calc(var(--margin) * 2);
 }
 
-header div.logo {
+header .logo {
     height: 56px;
 }
 
-header div .gridContainer {
+header .gridContainer {
     display: inline-flex;
     position: relative;
     height: 32px;
     font-size: var(--HeaderFS);
     font-weight: bold;
     column-gap: calc(var(--margin) * 2);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 /* Styling for dropdown container */
@@ -318,6 +409,7 @@ header .dropdown .dropbtn {
     height: 32px;
     padding: 4px 12px;
     z-index: 1;
+    letter-spacing: 3px;
 }
 
 header .dropdown:hover .dropbtn {
@@ -331,7 +423,9 @@ header .dropdown .dropdown-content {
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     left: 50%;
-    transform: translateX(-50%) translateY(+20%);
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid var(--BorderColor);
 }
 
 /* Show the dropdown menu on hover */
@@ -341,6 +435,9 @@ header .dropdown:hover .dropdown-content {
     grid-template-columns: 1fr 1fr;
     /* Zwei Spalten */
     grid-gap: 0;
+    background-color: white;
+    border-radius: 4px;
+    height: auto;
 }
 
 /* Links inside the dropdown */
@@ -352,8 +449,9 @@ header .dropdown .dropdown-content a {
     width: 280px;
     color: black;
     background-color: white;
-    border: 1px solid transparent;
     font-weight: lighter;
+    border-radius: 0;
+    text-align: center;
 }
 
 /* Change color of dropdown links on hover */
@@ -365,37 +463,24 @@ header .dropdown .dropdown-content a:hover {
     text-underline-offset: 4px;
 }
 
-header .dropdown .dropdown-content a:nth-child(odd) {
-    border-left: 1px solid var(--BorderColor);
-}
-
-header .dropdown .dropdown-content a:nth-child(even) {
-    border-right: 1px solid var(--BorderColor);
-    text-align: right;
-}
-
 header .dropdown .dropdown-content a:first-child {
     /* Runden Sie die oberen Ecken ab */
     border-top-left-radius: 4px;
-    border-top: 1px solid var(--BorderColor);
 }
 
 header .dropdown .dropdown-content a:nth-child(2) {
     /* Runden Sie die oberen Ecken ab */
     border-top-right-radius: 4px;
-    border-top: 1px solid var(--BorderColor);
 }
 
 header .dropdown .dropdown-content a:nth-last-child(2) {
     /* Runden Sie die oberen Ecken ab */
     border-bottom-left-radius: 4px;
-    border-bottom: 1px solid var(--BorderColor);
 }
 
 header .dropdown .dropdown-content a:last-child {
     /* Runden Sie die unteren Ecken ab */
     border-bottom-right-radius: 4px;
-    border-bottom: 1px solid var(--BorderColor);
 }
 
 main {
@@ -406,38 +491,94 @@ main {
     width: 100%;
 }
 
-main .outerFrame {
+.topicFrame {
     border-radius: var(--mainBorderRadius);
-    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: inline-block;
     position: relative;
     padding: var(--padding);
     width: 100%;
+    transition: all 0.5s ease;
 }
 
-main .outerFrame .topic {
+.topicFrame .topic {
     border-radius: var(--mainBorderRadius);
     box-shadow: inset 0 0 0 1px var(--AccentColor);
     font-size: var(--H1);
     letter-spacing: 2px;
     padding: var(--padding);
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
+    cursor: pointer;
 }
 
-main .h3 {
-    text-align: start;
+.topicFrame .pageDescription {
+    opacity: 0;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: var(--mainBorderRadius);
+    text-align: justify;
+    overflow: hidden;
+    padding: 0;
+    text-align: justify;
+    cursor: text;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--FontColor);
 }
 
-main .outerContainer {
-    width: 95%;
+.topicFrame:hover .pageDescription {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 500px; /* Adjust this value based on your content's needs */
+    /* Removed padding transition for smoother effect */
+    padding: var(--padding);
+    padding-bottom: 0;
+}
+
+.subtopic {
+    width: calc(100% - var(--margin));
+}
+
+.subtopic > .header{
+    border-radius: var(--mainBorderRadius);
+    box-shadow: inset 0 0 0 1px var(--BorderColor);
+    letter-spacing: 2px;
+    font-size: var(--H3);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subsubtopic{
+    line-height: 1.5;
+    margin: var(--margin);
+    width: calc(100% - 2 * var(--margin));
+}
+
+.subsubtopic > .header{
+    border-bottom: 2px solid var(--AccentColor);
+    display: block;
+    font-size: var(--H4);
+    font-weight: 900;
+    margin-bottom: var(--margin);
+}
+
+.outerContainer {
+    margin: var(--margin) 0;
+    border: 0;
+    width: calc(100% - var(--margin));
     justify-content: center;
     padding: 0;
     display: inline-flex;
     flex-direction: column;
 }
 
-main .outerContainer .grid {
+.outerContainer .grid {
     margin: var(--margin);
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
@@ -446,7 +587,7 @@ main .outerContainer .grid {
     margin: var(--margin) 0;
 }
 
-main .outerContainer .grid a {
+.outerContainer .grid a {
     border: 1px solid var(--BorderColor);
     border-radius: var(--mainBorderRadius);
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);align-items: center;
@@ -458,14 +599,14 @@ main .outerContainer .grid a {
     width: 100%;
 }
 
-main .outerContainer .grid a:hover {
+.outerContainer .grid a:hover {
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--HoverColor);
     transition: box-shadow 0.2s ease-in, background-color 0.1s ease-in;
     cursor: pointer;
 }
 
-main .outerContainer .grid a .gridContainer .Themenueberschrift {
+.outerContainer .grid a .gridContainer .Themenueberschrift {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -476,14 +617,14 @@ main .outerContainer .grid a .gridContainer .Themenueberschrift {
     border-radius: 4px;
 }
 
-main .outerContainer .grid a .gridContainer:hover .Themenueberschrift {
+.outerContainer .grid a .gridContainer:hover .Themenueberschrift {
     text-decoration: underline;
     text-decoration-color: var(--BorderColor);
     text-underline-offset: 2px;
     cursor: pointer;
 }
 
-main .outerContainer .grid a .gridContainer .Themenbeschreibung {
+.outerContainer .grid a .gridContainer .Themenbeschreibung {
     width: 100%;
     padding: calc(var(--padding) * 0.2);
     word-wrap: break-word;
@@ -492,30 +633,31 @@ main .outerContainer .grid a .gridContainer .Themenbeschreibung {
     cursor: pointer;
 }
 
-main .outerContainer .grid a .gridContainer:hover .Themenbeschreibung {
+.outerContainer .grid a .gridContainer:hover .Themenbeschreibung {
     cursor: pointer;
 }
 
-main .outerContainer .grid a .Themenbeschreibung img {
+.outerContainer .grid a .Themenbeschreibung img {
     width: 20%;
     min-width: 80px;
     aspect-ratio: 1;
     border: var(--mainBorder);
     border-radius: var(--mainBorderRadius);
     float: left;
-    margin-right: var(--margin);
+    margin-left: 0 calc(0.5 * var(--margin));
 }
 
-main .outerContainer .grid a .Themenbeschreibung div {
+.outerContainer .grid a .Themenbeschreibung div {
     cursor: pointer;
     font-weight: 300;
+    text-align: justify;
 }
 
-main .outerContainer .throwsContainer {
+.outerContainer .throwsContainer {
     width: 100%;
 }
 
-main .outerContainer #canvasContainer {
+.outerContainer #canvasContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -523,11 +665,11 @@ main .outerContainer #canvasContainer {
     height: 100%;
 }
 
-main .outerContainer div input {
+.outerContainer div input {
     width: 100%;
 }
 
-main .outerContainer .canvasContainer {
+.outerContainer .canvasContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -536,16 +678,16 @@ main .outerContainer .canvasContainer {
     align-content: center;
 }
 
-main .outerContainer .canvasContainer div {
+.outerContainer .canvasContainer div {
     width: 100%;
 }
 
-main .outerContainer .canvasContainer div label {
+.outerContainer .canvasContainer div label {
     display: inline-block;
     vertical-align: middle;
 }
 
-main .outerContainer .canvasContainer div select {
+.outerContainer .canvasContainer div select {
     background-color: var(--HoverColor);
     border: var(--mainBorder);
     border-radius: var(--mainBorderRadius);
@@ -555,21 +697,21 @@ main .outerContainer .canvasContainer div select {
     vertical-align: middle;
 }
 
-main .outerContainer .canvasContainer div #htDropdown {
+.outerContainer .canvasContainer div #htDropdown {
     margin-right: calc(var(--margin) * 4);
 }
 
-main .outerContainer .canvasContainer div #stDropdown {
+.outerContainer .canvasContainer div #stDropdown {
     margin-right: var(--margin);
 }
 
-main .outerContainer .canvasContainer div input {
+.outerContainer .canvasContainer div input {
     display: inline-block;
     width: 20%;
     vertical-align: middle;
 }
 
-main .outerContainer .canvasContainer #canvasContainer {
+.outerContainer .canvasContainer #canvasContainer {
     width: 100%;
     height: 60vh;
     display: flex;
@@ -577,11 +719,11 @@ main .outerContainer .canvasContainer #canvasContainer {
     align-items: center;
 }
 
-main .outerContainer .canvasContainer #canvasContainer canvas {
+.outerContainer .canvasContainer #canvasContainer canvas {
     max-height: 60vh;
 }
 
-main .outerContainer .canvasFlex {
+.outerContainer .canvasFlex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -591,15 +733,7 @@ main .outerContainer .canvasFlex {
     margin: var(--margin);
 }
 
-main .outerContainer .innerContainer {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    display: inline-flex;
-    align-items: center;
-}
-
-main .outerContainer .sliderContainer {
+.outerContainer .sliderContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -609,16 +743,16 @@ main .outerContainer .sliderContainer {
     width: 100%;
 }
 
-main .outerContainer .sliderContainer input {
+.outerContainer .sliderContainer input {
     width: 100%;
     padding: var(--padding);
 }
 
-main .outerContainer .sliderContainer input:hover {
+.outerContainer .sliderContainer input:hover {
     cursor: pointer;
 }
 
-main .outerContainer .diagramGrid {
+.outerContainer .diagramGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -628,7 +762,7 @@ main .outerContainer .diagramGrid {
     width: 100%;
 }
 
-main .outerContainer .zahlenContainer {
+.outerContainer .zahlenContainer {
     margin: 8px 0;
     width: 100%;
     flex-direction: row;
@@ -639,25 +773,16 @@ main .outerContainer .zahlenContainer {
     align-content: center;
 }
 
-main .outerContainer #Umgebungseinrichtung {
-    line-height: 1.5;
-}
-
-main .outerContainer #Umgebungseinrichtung .flex {
+.outerContainer #Umgebungseinrichtung .flex {
      padding-bottom: 0;
 }
 
-main .outerContainer #Umgebungseinrichtung .flex img,
-main .outerContainer #Umgebungseinrichtung img {
+.outerContainer #Umgebungseinrichtung .flex img,
+.outerContainer #Umgebungseinrichtung img {
     width: calc(30% - 2 * var(--margin));
 }
 
-main .outerContainer #Umgebungseinrichtung div {
-    margin: 0 var(--margin);
-    padding: var(--padding);
-}
-
-main .outerContainer #Umgebungseinrichtung .flex .text {
+.outerContainer #Umgebungseinrichtung .flex .text {
     padding: 0;
     width: calc(100% - 2 * var(--margin));
 }
@@ -729,39 +854,20 @@ footer div {
         grid-gap: 0;
     }
 
-    header .dropdown .dropdown-content a:nth-child(even),
-    header .dropdown .dropdown-content a:nth-child(odd) {
+    header .dropdown .dropdown-content a{
         text-align: center;
-    }
-
-    header .dropdown .dropdown-content a,
-    header .dropdown .dropdown-content a:nth-child(2),
-    header .dropdown .dropdown-content a:nth-last-child(2) {
-        border-right: 1px solid var(--BorderColor);
-        border-left: 1px solid var(--BorderColor);
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
     }
 
     header .dropdown .dropdown-content a:first-child {
         /* Runden Sie die oberen Ecken ab */
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-        border-top: 1px solid var(--BorderColor);
-    }
-
-    header .dropdown .dropdown-content a {
-        border-right: 1px solid var(--BorderColor);
-        border-left: 1px solid var(--BorderColor);
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
     }
 
     header .dropdown .dropdown-content a:last-child {
         /* Runden Sie die oberen Ecken ab */
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
-        border-bottom: 1px solid var(--BorderColor);
     }
 
     main .outerContainer .diagramGrid {
