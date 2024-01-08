@@ -516,29 +516,17 @@ main {
 }
 
 .topicFrame .pageDescription {
-    opacity: 0;
-    max-height: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: var(--mainBorder );
     border-radius: var(--mainBorderRadius);
-    text-align: justify;
-    overflow: hidden;
-    padding: 0;
-    text-align: justify;
     cursor: text;
+    color: var(--FontColor);
     font-weight: 400;
     font-style: italic;
-    color: var(--FontColor);
-}
-
-.topicFrame:hover .pageDescription {
-    opacity: 1;
-    transform: scaleY(1);
-    max-height: 500px; /* Adjust this value based on your content's needs */
-    /* Removed padding transition for smoother effect */
+    margin-top: var(--margin);
+    max-height: 500px;
     padding: var(--padding);
-    padding-bottom: 0;
+    overflow: hidden;
+    text-align: justify;
 }
 
 .subtopic {
@@ -651,6 +639,8 @@ main {
     cursor: pointer;
     font-weight: 300;
     text-align: justify;
+    hyphens: auto;
+    word-break: normal;
 }
 
 .outerContainer .throwsContainer {

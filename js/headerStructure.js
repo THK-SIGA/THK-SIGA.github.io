@@ -8,18 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="dropdown" onclick="window.location.href='..';">\
                     <button class="dropbtn">SIGA</button>\
                     <div class="dropdown-content">\
-                        <a href="../html/SIGA_01_Google_Colab.html">Google Colab</a>\
-                        <a href="../html/SIGA_02_Audacity.html">Audacity</a>\
-                        <a href="../html/SIGA_03_Sinus_und_Kosinus.html">Sinus und Kosinus</a>\
-                        <a href="../html/SIGA_04_Faltung.html">Faltung</a>\
-                        <a href="../html/SIGA_05_DFT.html">DFT</a>\
-                        <a href="../html/SIGA_06_Gleitender_Mittelwert.html">Gleitender Mittelwert</a>\
-                        <a href="../html/SIGA_07_Abtasttheorem.html">Abtasttheorem</a>\
-                        <a href="../html/SIGA_08_Leakage.html">Leakage</a>\
-                        <a href="../html/SIGA_09_Tierstimmen.html">Tierstimmen</a>\
-                        <a href="../html/SIGA_10_Erwartungswert_und_Varianz.html">Erwartungswert und Varianz</a>\
-                        <a href="../html/SIGA_11_Korrelationskoeffizient.html">Korrelationskoeffizient</a>\
-                        <a href="../html/SIGA_12_Linksammlung.html">Linksammlung</a>\
+                        <a href="../html/SIGA_WolframAlpha.html">Wolfram Alpha</a>\
+                        <a href="../html/SIGA_Google_Colab.html">Google Colab</a>\
+                        <a href="../html/SIGA_Audacity.html">Audacity</a>\
+                        <a href="../html/SIGA_Sinus_und_Kosinus.html">Sinus und Kosinus</a>\
+                        <a href="../html/SIGA_Faltung.html">Faltung</a>\
+                        <a href="../html/SIGA_DFT.html">DFT</a>\
+                        <a href="../html/SIGA_Gleitender_Mittelwert.html">Gleitender Mittelwert</a>\
+                        <a href="../html/SIGA_Abtasttheorem.html">Abtasttheorem</a>\
+                        <a href="../html/SIGA_Leakage.html">Leakage</a>\
+                        <a href="../html/SIGA_Tierstimmen.html">Tierstimmen</a>\
+                        <a href="../html/SIGA_Erwartungswert_und_Varianz.html">Erwartungswert und Varianz</a>\
+                        <a href="../html/SIGA_Verteilungen.html">Verteilungen</a>\
+                        <a href="../html/SIGA_Stichprobe.html">Stichprobe</a>\
+                        <a href="../html/SIGA_Gezinkte_Wuerfel.html">Gezinkte Würfel</a>\
+                        <a href="../html/SIGA_Korrelationskoeffizient.html">Korrelationskoeffizient</a>\
+                        <a href="../html/SIGA_Linksammlung.html">Linksammlung</a>\
                     </div>\
                 </div>\
                 <div class="dropdown" onclick="window.location.href='..';">\
