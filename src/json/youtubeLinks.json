@@ -1,0 +1,33 @@
+[
+
+    {
+        "title": "Was ist eine Fourier-Transformation? Eine visuelle Einführung",
+        "url": "https://www.youtube.com/watch?v=spUNpyF58BY",
+        "isExternal": true
+    },
+    {
+        "title": "3Blue1Brown",
+        "url": "https://www.youtube.com/@3blue1brown",
+        "isExternal": true
+    },
+    {
+        "title": "DFT",
+        "url": "SIGA_DFT.html",
+        "isExternal": false
+    },
+    {
+        "title": "But what is a convolution?",
+        "url": "https://www.youtube.com/watch?v=KuXjwB4LzSA",
+        "isExternal": true
+    },
+    {
+        "title": "3Blue1Brown",
+        "url": "https://www.youtube.com/@3blue1brown",
+        "isExternal": true
+    },
+    {
+        "title": "Faltung",
+        "url": "SIGA_Faltung.html",
+        "isExternal": false
+    }
+]
