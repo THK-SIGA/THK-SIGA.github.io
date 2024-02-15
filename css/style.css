@@ -187,21 +187,6 @@
     text-decoration: none;
 }
 
-a,
-a:active,
-a:focus {
-    font-family: 'Roboto Mono', monospace;
-    color: var(--FontColor);
-    font-weight: 300;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-a:focus,
-a:hover {
-    cursor: pointer;
-}
-
 .image {
     display: flex;
     flex-direction: column;
@@ -213,17 +198,17 @@ a:hover {
     margin: var(--margin) 0;
 }
 
-.linklist,
+.toolLinkList,
 .youtubelinklist,
 .internetlinklist {
     display: grid;
     grid-template-rows: auto;
-    gap: 4px;
+    gap: 12px;
     width: calc(100% - var(--margin));
     margin-left: var(--margin);
 }
 
-.linklist {
+.toolLinkList {
     grid-template-columns: 3fr 6fr 11fr;
 }
 
@@ -232,10 +217,9 @@ a:hover {
     grid-template-columns: 14fr 3fr 3fr;
 }
 
-.linklist .Beschreibung {
-    font-style: italic;
+.toolLinkList .Beschreibung {
     text-align: justify;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .imageGrid3 {
@@ -398,12 +382,20 @@ canvas {
 
 a {
     background-color: transparent;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--FontColor);
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    /* Gemeinsam für Hover und Focus */
 }
 
 a:hover {
     color: var(--AccentColor);
     text-decoration: underline;
 }
+
 
 a.intern {
     color: var(--AccentColor);
@@ -416,9 +408,35 @@ html {
 
 header {
     display: flex;
-    justify-content: space-around;
-    padding: var(--padding);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: var(--margin) 0;
+    border: 0;
+    width: 100%;
+    padding: 0;
+    position: relative;
 }
+
+header a img {
+    height: 48px;
+    width: auto;
+    margin: 0;
+    padding: 8px;
+    box-shadow: none;
+    border: none;
+    transition: ease-in-out padding 0.1s;
+
+}
+
+header a img:hover {
+    cursor: pointer;
+    padding: 0px;
+    transition: ease-in-out padding 0.5s;
+}
+
 
 header div {
     display: inline-flex;
@@ -429,13 +447,8 @@ header div {
     column-gap: calc(var(--margin) * 2);
 }
 
-header .logo {
-    height: 56px;
-}
-
 header .gridContainer {
     display: inline-flex;
-    position: relative;
     height: 32px;
     font-size: var(--HeaderFS);
     font-weight: bold;
@@ -459,11 +472,7 @@ header .dropdown:before {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 120%;
-}
-
-header .dropdown:hover {
-    cursor: pointer;
+    height: 160%;
 }
 
 header .dropdown .dropbtn {
@@ -478,11 +487,15 @@ header .dropdown .dropbtn {
     padding: 4px 12px;
     z-index: 1;
     letter-spacing: 3px;
+    transition: all 0.2s ease-out;
 }
 
 header .dropdown:hover .dropbtn {
-    background-color: rgba(0, 0, 0, 0.04);
-    transition: background-color 0.2s ease-out;
+    color: var(--AccentColor);
+    transform: scale(1.3);
+    transition: transform 0.2s ease-out;
+    border: 1px solid var(--AccentColor);
+    cursor: default;
 }
 
 /* Hidden by Default */
@@ -491,7 +504,7 @@ header .dropdown .dropdown-content {
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(15px);
     background-color: white;
     border: 1px solid var(--BorderColor);
 }
@@ -581,6 +594,17 @@ main {
     text-transform: uppercase;
     width: 100%;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topicFrame .topic a {
+    font-size: var(--H1);
+}
+
+.topicFrame .topic a:hover {
+    text-decoration: none;
 }
 
 .topicFrame .pageDescription {
@@ -634,7 +658,7 @@ main {
     flex-direction: column;
 }
 
-.outerContainer .grid {
+.outerContainer .indexGrid {
     margin: var(--margin);
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
@@ -643,7 +667,7 @@ main {
     margin: var(--margin) 0;
 }
 
-.outerContainer .grid a {
+.outerContainer .indexGrid a {
     border: 1px solid var(--BorderColor);
     border-radius: var(--mainBorderRadius);
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
@@ -656,14 +680,15 @@ main {
     width: 100%;
 }
 
-.outerContainer .grid a:hover {
+.outerContainer .indexGrid a:hover {
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
     background-color: var(--HoverColor);
-    transition: box-shadow 0.2s ease-in, background-color 0.1s ease-in;
     cursor: pointer;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease-in, background-color 0.1s ease-in;
 }
 
-.outerContainer .grid a .gridContainer .Themenueberschrift {
+.outerContainer .indexGrid a .gridContainer .Themenueberschrift {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -674,14 +699,14 @@ main {
     border-radius: 4px;
 }
 
-.outerContainer .grid a .gridContainer:hover .Themenueberschrift {
+.outerContainer .indexGrid a:hover .gridContainer .Themenueberschrift {
     text-decoration: underline;
     text-decoration-color: var(--BorderColor);
     text-underline-offset: 2px;
     cursor: pointer;
 }
 
-.outerContainer .grid a .gridContainer .Themenbeschreibung {
+.outerContainer .indexGrid a .gridContainer .Themenbeschreibung {
     width: 100%;
     padding: calc(var(--padding) * 0.2);
     word-wrap: break-word;
@@ -690,11 +715,8 @@ main {
     cursor: pointer;
 }
 
-.outerContainer .grid a .gridContainer:hover .Themenbeschreibung {
-    cursor: pointer;
-}
-
-.outerContainer .grid a .Themenbeschreibung img {
+.outerContainer .indexGrid a .gridContainer .Themenbeschreibung img {
+    background-color: white;
     width: 20%;
     min-width: 80px;
     aspect-ratio: 1;
@@ -702,14 +724,24 @@ main {
     border-radius: var(--mainBorderRadius);
     float: left;
     margin-left: 0 calc(0.5 * var(--margin));
+    box-shadow: none;
 }
 
-.outerContainer .grid a .Themenbeschreibung div {
+.outerContainer .indexGrid a:hover .gridContainer .Themenbeschreibung img {
+    background-color: white;
+    box-shadow: none;
+}
+
+.outerContainer .indexGrid a .gridContainer .Themenbeschreibung div {
     cursor: pointer;
     font-weight: 300;
     text-align: justify;
     hyphens: auto;
     word-break: normal;
+}
+
+.outerContainer .indexGrid a:hover .gridContainer .Themenbeschreibung div {
+    text-decoration: none;
 }
 
 .outerContainer .throwsContainer {
@@ -896,7 +928,7 @@ footer div {
 @media screen and (max-width: 576px) {
     :root {}
 
-    main .outerContainer .grid {
+    main .outerContainer .indexGrid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
@@ -961,7 +993,7 @@ footer div {
 
 /* || LARGE */
 @media screen and (min-width: 992px) {
-    main .outerContainer .grid {
+    main .outerContainer .indexGrid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
@@ -981,7 +1013,7 @@ footer div {
 
 /* || XL  */
 @media screen and (min-width: 1200px) {
-    main .outerContainer .grid {
+    main .outerContainer .indexGrid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 

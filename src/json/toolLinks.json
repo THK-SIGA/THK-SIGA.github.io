@@ -1,0 +1,20 @@
+{
+    "tools": [
+      {
+        "name": "WolframAlpha",
+        "link": "https://www.wolframalpha.com/",
+        "description": "Wolfram Alpha ist eine intelligente Online-Suchmaschine, die speziell für Berechnungen und das Beantworten von Fragen entwickelt wurde. Es bietet detaillierte Antworten aus verschiedenen Wissensbereichen wie Mathematik, Wissenschaft und Allgemeinwissen. Die Plattform verarbeitet natürliche Sprache, um komplexe Fragen zu verstehen und liefert präzise Ergebnisse, Diagramme und Erklärungen."
+      },
+      {
+        "name": "Google Colab",
+        "link": "https://colab.research.google.com/",
+        "description": "Google Colab ist eine Online-Plattform, die es ermöglicht, Python-Code in der Cloud zu schreiben und auszuführen. Es unterstützt Datenanalyse und maschinelles Lernen ohne spezielle Software-Installation. Benutzer können ihre Projekte leicht mit anderen teilen und sogar auf leistungsstarke Hardware wie GPUs kostenlos zugreifen."
+      },
+      {
+        "name": "Audacity",
+        "link": "https://www.audacity.de/downloads/",
+        "description": "Audacity ist ein kostenfreies Programm zur Audio-Bearbeitung. Es ermöglicht das Aufnehmen, Bearbeiten und Mischen von Audiodateien mit einer Reihe von Werkzeugen. Audacity kann Audiomaterial schneiden, zusammenfügen und Effekte hinzufügen. Es ist benutzerfreundlich und eignet sich sowohl für Anfänger als auch für erfahrene Audioeditoren, die Projekte wie Podcasts, Musik oder Soundtracks bearbeiten möchten."
+      }
+    ]
+  }
+  
