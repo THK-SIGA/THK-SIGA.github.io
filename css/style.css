@@ -682,7 +682,7 @@ main {
 
 .outerContainer .indexGrid a:hover {
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
-    background-color: var(--HoverColor);
+    /* background-color: var(--HoverColor); */
     cursor: pointer;
     text-decoration: none;
     transition: box-shadow 0.2s ease-in, background-color 0.1s ease-in;
@@ -725,11 +725,14 @@ main {
     float: left;
     margin-left: 0 calc(0.5 * var(--margin));
     box-shadow: none;
+    transition: padding 0.1s ease-in-out;
 }
 
 .outerContainer .indexGrid a:hover .gridContainer .Themenbeschreibung img {
     background-color: white;
     box-shadow: none;
+    padding: calc(0.25 * var(--padding));
+    transition: padding 0.3s ease-in-out;
 }
 
 .outerContainer .indexGrid a .gridContainer .Themenbeschreibung div {
