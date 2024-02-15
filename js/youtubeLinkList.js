@@ -31,9 +31,9 @@ function loadAndInsertYoutubeLinks() {
 
                 const topicsDiv = document.createElement("div");
                 video.topics.forEach((topic, index) => {
-                    topicsDiv.innerHTML += `<a href="${
-                        topic.link
-                    }" class="intern">${topic.name}</a>${
+                    topicsDiv.innerHTML += `<a href="SIGA_${
+                        topic.name
+                    }.html" class="intern">${topic.name}</a>${
                         index < video.topics.length - 1 ? ", " : ""
                     }`;
                 });

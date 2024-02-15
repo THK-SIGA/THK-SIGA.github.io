@@ -4,8 +4,7 @@
       "title": "Was ist eine Fourier-Transformation? Eine visuelle Einführung",
       "link": "https://www.youtube.com/watch?v=spUNpyF58BY",
       "topics": [
-        { "name": "DFT", "link": "SIGA_DFT.html" },
-        { "name": "Faltung", "link": "SIGA_Faltung.html" }
+        { "name": "DFT", "link": "SIGA_DFT.html" }
       ],
       "channel": "3Blue1Brown",
       "channelLink": "https://www.youtube.com/@3blue1brown"

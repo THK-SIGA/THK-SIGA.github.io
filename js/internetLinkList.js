@@ -26,7 +26,9 @@ function loadAndInsertInternetLinks() {
 
                 const topicsDiv = document.createElement("div");
                 link.topics.forEach((topic, index) => {
-                    topicsDiv.innerHTML += `<a href="SIGA_${topic}.html" class="intern">${topic}</a>${
+                    topicsDiv.innerHTML += `<a href="${
+                        topic.link
+                    }" class="intern">${topic.name}</a>${
                         index < link.topics.length - 1 ? ", " : ""
                     }`;
                 });
